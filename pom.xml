@@ -12,6 +12,7 @@
     <module>web</module>
     <module>service</module>
     <module>utils</module>
+      <module>agvdccnetwork</module>
   </modules>
   <packaging>pom</packaging>
 
@@ -27,6 +28,7 @@
     <db.version>1.0-SNAPSHOT</db.version>
     <hutool.version>4.6.7</hutool.version>
     <slf4j.version>1.7.28</slf4j.version>
+    <netty.version>4.1.42.Final</netty.version>
   </properties>
 
   <dependencies>
@@ -40,6 +42,12 @@
       <groupId>com.duangframework.database</groupId>
       <artifactId>duang-db</artifactId>
       <version>${db.version}</version>
+    </dependency>
+    <!-- netty -->
+    <dependency>
+      <groupId>io.netty</groupId>
+      <artifactId>netty-all</artifactId>
+      <version>${netty.version}</version>
     </dependency>
     <!--hutool-->
     <dependency>
@@ -68,5 +76,10 @@
       <artifactId>slf4j-log4j12</artifactId>
       <version>${slf4j.version}</version>
     </dependency>
+      <dependency>
+          <groupId>com.agvdcc.utils</groupId>
+          <artifactId>agvdcc-utils</artifactId>
+          <version>1.0-SNAPSHOT</version>
+      </dependency>
   </dependencies>
 </project>

@@ -2,8 +2,10 @@ package com.agvdcc.core.dispatch;
 
 import cn.hutool.core.thread.ThreadUtil;
 import cn.hutool.core.util.ReflectUtil;
+import com.agvdcc.core.handshaker.HandshakerFactory;
 import com.agvdcc.core.helper.BeanHelper;
 import com.agvdcc.core.protocol.IProtocol;
+import io.netty.handler.codec.http.websocketx.WebSocketClientHandshakerFactory;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -33,6 +35,15 @@ public class DispatchFactory {
         if (SERVICE_METHOD_MAP.isEmpty()) {
             SERVICE_METHOD_MAP.putAll(BeanHelper.duang().toServiceBean());
         }
+
+
+        ThreadUtil.execute(new Runnable() {
+            @Override
+            public void run() {
+                HandshakerFactory.duang().replyProtocol(protocol);
+            }
+        });
+
         FutureTask<Object> futureTask = (FutureTask<Object>) ThreadUtil.execAsync(new Callable<Object>() {
             @Override
             public Object call() throws Exception {
@@ -54,6 +65,8 @@ public class DispatchFactory {
             if (futureTask.isDone()) {
                 // 中止线程，参数为true时，会中止正在运行的线程，为false时，如果线程未开始，则停止运行
                 futureTask.cancel(true);
+                // 回复握手消息
+                HandshakerFactory.duang().replyProtocol(protocol);
             }
         }
         return  null;

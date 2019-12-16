@@ -8,6 +8,9 @@ public interface IProtocol {
     // 功能指令
     String getCommand();
 
+    // 方向
+    String getDirection();
+
     // 协议原始内容
     String getBody();
 
