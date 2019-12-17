@@ -19,14 +19,14 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
-        <network.version>1.0-SNAPSHOT</network.version>
+        <core.version>1.0-SNAPSHOT</core.version>
     </properties>
 
     <dependencies>
         <dependency>
-            <groupId>com.agvdcc.utils</groupId>
-            <artifactId>agvdcc-utils</artifactId>
-            <version>${network.version}</version>
+            <groupId>com.agvdcc.core</groupId>
+            <artifactId>agvdcc-core</artifactId>
+            <version>${core.version}</version>
         </dependency>
     </dependencies>
 

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>com.agvdcc.opentcs</groupId>
+  <artifactId>agvdcc-opentcs</artifactId>
+  <packaging>pom</packaging>
+  <version>1.0-SNAPSHOT</version>
+  <modules>
+    <module>openTCS-API-Base</module>
+    <module>openTCS-API-Injection</module>
+    <module>openTCS-CommAdapter-Loopback</module>
+    <module>openTCS-Common</module>
+    <module>openTCS-Documentation</module>
+    <module>openTCS-Impl-Configuration-cfg4j</module>
+    <module>openTCS-Kernel</module>
+    <module>openTCS-Kernel-Extension-HTTP-Services</module>
+    <module>openTCS-Kernel-Extension-RMI-Services</module>
+    <module>openTCS-Kernel-Extension-Statistics</module>
+    <module>openTCS-Kernel-Extension-TCP-Host-Interface</module>
+    <module>openTCS-KernelControlCenter</module>
+    <module>openTCS-PlantOverview</module>
+    <module>openTCS-PlantOverview-Base</module>
+    <module>openTCS-PlantOverview-Panel-LoadGenerator</module>
+    <module>openTCS-PlantOverview-Panel-ResourceAllocation</module>
+    <module>openTCS-PlantOverview-Panel-Statistics</module>
+    <module>openTCS-PlantOverview-Themes-Default</module>
+    <module>openTCS-Strategies-Default</module>
+  </modules>
+
+  <name>agvdcc-opentcs</name>
+  <url>http://www.example.com</url>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <maven.compiler.source>18</maven.compiler.source>
+    <maven.compiler.target>1.8</maven.compiler.target>
+  </properties>
+
+</project>
