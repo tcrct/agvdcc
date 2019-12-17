@@ -39,7 +39,7 @@ public class BeanHelper {
                     Service serviceAnnot = serviceClass.getAnnotation(Service.class);
                     String key = serviceAnnot.value();
                     if (ToolsKit.isEmpty(key)) {
-                        int endIndex = serviceClass.getSimpleName().toLowerCase().indexOf("servcie");
+                        int endIndex = serviceClass.getSimpleName().toLowerCase().indexOf("service");
                         if(endIndex > -1) {
                             key = serviceClass.getSimpleName().substring(0, endIndex);
                         }
